@@ -86,3 +86,64 @@ Lê a data de nascimento e calcula a idade em anos, meses e dias usando Period. 
    Executar
 
 Cada arquivo tem um método main, então é só compilar e rodar:
+
+
+  Seção 12 - Pastas e Arquivos
+
+
+
+# 📦 Product Summary Generator
+
+Programa em Java que lê um arquivo `.csv` contendo uma lista de produtos (nome, preço e quantidade), calcula o valor total de cada item e gera um novo arquivo `.csv` com o resumo.
+
+## 🧠 Como funciona
+
+1. O usuário informa o caminho do arquivo CSV de entrada.
+2. O programa lê o arquivo linha por linha, separando os campos por vírgula.
+3. Cada linha é convertida em um objeto da classe `Product`.
+4. É criada automaticamente uma pasta `out` na mesma pasta do arquivo de entrada.
+5. Um novo arquivo `summary.csv` é gerado dentro dessa pasta, contendo o nome de cada produto e seu valor total (`preço x quantidade`).
+
+## 📄 Formato esperado do CSV de entrada
+
+```
+Notebook,3500.00,2
+Mouse,89.90,5
+Teclado,150.00,3
+```
+
+## 📤 Exemplo de saída (summary.csv)
+
+```
+Notebook,7000.00
+Mouse,449.50
+Teclado,450.00
+```
+
+## 🛠️ Tecnologias e conceitos aplicados
+
+- Leitura e escrita de arquivos (`BufferedReader`, `BufferedWriter`)
+- Tratamento de exceções (`try-with-resources`, `IOException`)
+- Manipulação de Strings e conversão de tipos (`split`, `parseDouble`, `parseInt`)
+- Orientação a Objetos (classe `Product` em pacote separado)
+- Formatação de números com `Locale` e `String.format`
+
+## 📁 Estrutura
+
+```
+src/
+├── application/
+│   └── Program.java
+└── entities/
+    └── Product.java
+```
+
+## ▶️ Como executar
+
+1. Clone o repositório
+2. Compile e execute a classe `Program`
+3. Informe o caminho completo do arquivo CSV quando solicitado
+
+---
+
+> 💡 Este projeto foi desenvolvido durante meus estudos de Java (curso de Nélio Alves, Udemy). A documentação deste README foi organizada com apoio de IA, mas o código e o aprendizado por trás dele são meus.
